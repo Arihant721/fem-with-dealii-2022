@@ -20,7 +20,7 @@
 		"mhutchie.git-graph",
 		"ms-vscode.cpptools-extension-pack",
 		"stkb.rewrap",
-		"xaver.clang-format",
+		"xaver.clang-format"
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -34,7 +34,7 @@
 	],
 	"build": {
 		"args": {
-			"REMOTE_USER": "${localEnv:USER}",
+			"REMOTE_USER": "${localEnv:USER}"
 		}
 	},
 	// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
@@ -44,15 +44,15 @@
 	// Make sure we add a BUILD_POSTFIX environment variable that can be used as in
 	// ${workspaceFolder}/build${env:BUILD_POSTFIX}
 	"containerEnv": {
-		"BUILD_POSTFIX": "-container",
+		"BUILD_POSTFIX": "-container"
 	},
 	"mounts": [
 		// These are two docker volumes to allow persistent storage for the container.
 		"source=vscode-extensions,target=/home/${localEnv:USER}/.vscode-server/extensions,type=volume",
 		// And/or for VS Code Insiders
 		"source=vscode-extensions-insiders,target=/home/${localEnv:USER}/.vscode-server-insiders/extensions,type=volume",
-		"source=${localEnv:HOME}/.ssh,target=/home/${localEnv:USER}/.ssh,type=bind,consistency=cached",
-	],
+		"source=${localEnv:HOME}/.ssh,target=/home/${localEnv:USER}/.ssh,type=bind,consistency=cached"
+	]
 	// Uncomment the following if you want to work on docker on a remote machine
 	// In this case, you also need  "docker.host": "ssh://name-of-machine" in your
 	// settings.
